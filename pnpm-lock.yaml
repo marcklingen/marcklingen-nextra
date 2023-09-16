@@ -26,6 +26,9 @@ dependencies:
   postcss:
     specifier: ^8.4.29
     version: 8.4.29
+  posthog-js:
+    specifier: ^1.79.0
+    version: 1.79.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1253,6 +1256,10 @@ packages:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
     dependencies:
       reusify: 1.0.4
+    dev: false
+
+  /fflate@0.4.8:
+    resolution: {integrity: sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA==}
     dev: false
 
   /fill-range@7.0.1:
@@ -2738,6 +2745,12 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: false
+
+  /posthog-js@1.79.0:
+    resolution: {integrity: sha512-NgIGAXPkbmvKYcyOTkaNJYPTLvrXQqhWztkJ/v5NkF5CFdZucorc9OOPmZbGk+SLtHfK/8ilNyz6ql6JjBkkbQ==}
+    dependencies:
+      fflate: 0.4.8
     dev: false
 
   /property-information@6.3.0:
