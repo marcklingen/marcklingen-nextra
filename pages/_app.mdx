@@ -1,5 +1,15 @@
 import "../global.css";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+      <Script
+        id="umami"
+        data-website-id="867d729e-a671-4adc-85b3-d0d510d995a6"
+        src="https://static.m9n.dev/umami-events.js"
+      />
+    </>
+  );
 }

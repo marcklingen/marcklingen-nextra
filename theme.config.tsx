@@ -1,9 +1,10 @@
 import { NextraBlogTheme } from "nextra-theme-blog";
 
 const config: NextraBlogTheme = {
-  footer: <p>Marc Klingen</p>,
+  footer: null,
   head: ({ title, meta }) => (
     <>
+      <title>{title.includes("About") ? "Marc Klingen" : title}</title>
       {meta.description && (
         <meta name="description" content={meta.description} />
       )}
@@ -12,14 +13,22 @@ const config: NextraBlogTheme = {
     </>
   ),
   readMore: "Read More →",
-  postFooter: null,
   darkMode: true,
   navs: [
     {
-      url: "https://github.com",
+      url: "https://github.com/marcklingen",
       name: "GitHub",
     },
+    {
+      url: "https://twitter.com/marcklingen",
+      name: "Twitter",
+    },
+    {
+      url: "https://www.linkedin.com/in/marcklingen/",
+      name: "LinkedIn",
+    },
   ],
+  titleSuffix: " — Marc Klingen",
 };
 
 export default config;
