@@ -1,0 +1,78 @@
+- generic [active] [ref=e1]:
+  - article [ref=e2]:
+    - generic [ref=e3]:
+      - link "Projects" [ref=e4] [cursor=pointer]:
+        - /url: /projects
+      - link "Posts" [ref=e5] [cursor=pointer]:
+        - /url: /posts
+      - link "About" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - button "Toggle Dark Mode" [ref=e7] [cursor=pointer]:
+        - img [ref=e8]
+    - heading "Projects" [level=1] [ref=e10]
+    - generic [ref=e13]:
+      - text: Marc Klingen
+      - generic [ref=e14]: •
+      - link "Projects" [ref=e15] [cursor=pointer]:
+        - /url: /tags/Projects
+      - link "Marc Klingen" [ref=e16] [cursor=pointer]:
+        - /url: /tags/Marc Klingen
+    - paragraph [ref=e17]:
+      - emphasis [ref=e18]: to be updated with previous projects
+    - heading "2024–2026Permalink for this section" [level=2] [ref=e19]:
+      - text: 2024–2026
+      - link "Permalink for this section" [ref=e20] [cursor=pointer]:
+        - /url: "#20242026"
+        - text: "#"
+    - list [ref=e21]:
+      - listitem [ref=e22]:
+        - link "langfuse.com" [ref=e23] [cursor=pointer]:
+          - /url: https://langfuse.com
+          - strong [ref=e24]: langfuse.com
+        - text: — Open source LLM Engineering Platform
+    - heading "2023Permalink for this section" [level=2] [ref=e25]:
+      - text: "2023"
+      - link "Permalink for this section" [ref=e26] [cursor=pointer]:
+        - /url: "#2023"
+        - text: "#"
+    - list [ref=e27]:
+      - listitem [ref=e28]:
+        - text: "Mostly:"
+        - link "langfuse.com" [ref=e29] [cursor=pointer]:
+          - /url: https://langfuse.com
+          - strong [ref=e30]: langfuse.com
+        - text: — Open source LLM Engineering Platform
+      - listitem [ref=e31]:
+        - strong [ref=e32]: Brent
+        - text: — GitHub-Issue-to-PR-LLM-Agent
+      - listitem [ref=e33]:
+        - strong [ref=e34]: ScrapeAGI
+        - text: — autonomous web scraper
+      - listitem [ref=e35]:
+        - strong [ref=e36]: learn-from-ai.com
+        - text: — generate 10-lesson micro-courses with quizzes on any topic
+      - listitem [ref=e37]:
+        - strong [ref=e38]: LLM for teams
+        - text: — collaborative chat interface
+    - heading "2022Permalink for this section" [level=2] [ref=e39]:
+      - text: "2022"
+      - link "Permalink for this section" [ref=e40] [cursor=pointer]:
+        - /url: "#2022"
+        - text: "#"
+    - list [ref=e41]:
+      - listitem [ref=e42]:
+        - strong [ref=e43]: Finto.app
+        - text: — Monetization suite for SaaS companies (discontinued)
+    - generic [ref=e44]:
+      - generic [ref=e45]: Marc Klingen
+      - generic [ref=e46]:
+        - link "GitHub" [ref=e47] [cursor=pointer]:
+          - /url: https://github.com/marcklingen
+          - img [ref=e48]
+        - link "Twitter" [ref=e51] [cursor=pointer]:
+          - /url: https://twitter.com/marcklingen
+          - img [ref=e52]
+        - link "LinkedIn" [ref=e54] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/marcklingen/
+          - img [ref=e55]
+  - alert [ref=e59]

@@ -1,0 +1,168 @@
+- generic [active] [ref=e1]:
+  - article [ref=e3]:
+    - heading "Langfuse - Open source observability and analytics for LLM Apps" [level=1] [ref=e4]
+    - generic [ref=e5]:
+      - generic [ref=e7]:
+        - text: Clemens, Max and Marc,
+        - time [ref=e8]: Wed Jul 19 2023
+      - generic [ref=e9]:
+        - link "Back" [ref=e10] [cursor=pointer]:
+          - /url: /posts
+        - button "Toggle Dark Mode" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+    - paragraph [ref=e14]:
+      - emphasis [ref=e15]:
+        - strong [ref=e16]: "TLDR:"
+        - text: Langfuse is building open source product analytics (think ‘Mixpanel’) for LLM apps. We help companies to track and analyze quality, cost and latency across product releases and use cases.
+    - paragraph [ref=e17]:
+      - img "Langfuse" [ref=e18]
+    - paragraph [ref=e19]: Hi everyone,
+    - paragraph [ref=e20]: we’re Max, Marc and Clemens. We were part of the Winter 23 batch and work on Langfuse, where we help teams make sense of how their LLM applications perform.
+    - heading "🤯 ProblemPermalink for this section" [level=2] [ref=e21]:
+      - text: 🤯 Problem
+      - link "Permalink for this section" [ref=e22] [cursor=pointer]:
+        - /url: "#-problem"
+        - text: "#"
+    - paragraph [ref=e23]:
+      - text: LLMs represent a new paradigm in software. Single LLM calls are probabilistic and add substantial latency and cost. Applications use LLMs in new ways via advanced prompting, embedding-based retrieval, chains, and agents with tools. Teams building production-grade LLM applications have new
+      - strong [ref=e24]: product analytics
+      - text: and
+      - strong [ref=e25]: monitoring
+      - text: "needs:"
+    - list [ref=e26]:
+      - listitem [ref=e27]:
+        - strong [ref=e28]: Quality of outputs
+        - text: is difficult to measure. Outputs can e.g. be inaccurate, unhelpful, poorly formatted, hallucinated or error.
+      - listitem [ref=e29]:
+        - strong [ref=e30]: Cost of compute
+        - text: is a priority again given high inference costs.
+      - listitem [ref=e31]:
+        - strong [ref=e32]: Latency of responses
+        - text: matters for synchronous use cases.
+      - listitem [ref=e33]:
+        - strong [ref=e34]: Debugging is challenging
+        - text: due to increasingly complex LLM applications (chains, agents, tool usage).
+      - listitem [ref=e35]:
+        - strong [ref=e36]: Understanding user behavior
+        - text: is difficult given open-ended user prompts and conversational interactions.
+    - heading "🧠 SolutionPermalink for this section" [level=2] [ref=e37]:
+      - text: 🧠 Solution
+      - link "Permalink for this section" [ref=e38] [cursor=pointer]:
+        - /url: "#-solution"
+        - text: "#"
+    - paragraph [ref=e39]:
+      - img "Metrics" [ref=e40]
+    - paragraph [ref=e41]:
+      - text: "Langfuse derives actionable insights from production data. Our customers use Langfuse to answer questions such as:"
+      - emphasis [ref=e42]: “How helpful are my LLM app’s outputs? What is my LLM API spend by customer? What do latencies look like across geographies and steps of LLM chains? Did the quality of the application improve in newer versions? What was the impact of switching from zero-shotting GPT4 to using few-shotted Llama calls?”
+    - heading "MetricsPermalink for this section" [level=4] [ref=e43]:
+      - text: Metrics
+      - link "Permalink for this section" [ref=e44] [cursor=pointer]:
+        - /url: "#metrics"
+        - text: "#"
+    - list [ref=e45]:
+      - listitem [ref=e46]:
+        - strong [ref=e47]: Quality
+        - text: is measured through user feedback, model-based scoring and human-in-the-loop scored samples. Quality is assessed over time as well as across prompt versions, LLMs and users.
+      - listitem [ref=e48]:
+        - strong [ref=e49]: Cost and Latency
+        - text: are accurately measured and broken down by user, session, geography, feature, model and prompt version.
+    - heading "InsightsPermalink for this section" [level=4] [ref=e50]:
+      - text: Insights
+      - link "Permalink for this section" [ref=e51] [cursor=pointer]:
+        - /url: "#insights"
+        - text: "#"
+    - list [ref=e52]:
+      - listitem [ref=e53]:
+        - text: Monitor quality/cost/latency
+        - strong [ref=e54]: tradeoffs
+        - text: by release to facilitate product and engineering decisions.
+      - listitem [ref=e55]:
+        - strong [ref=e56]: Cluster use cases
+        - text: by employing a classifier to understand what users are doing.
+      - listitem [ref=e57]:
+        - text: Break down
+        - strong [ref=e58]: LLM usage by customer
+        - text: for usage-based billing and profitability analysis.
+    - heading "IntegrationsPermalink for this section" [level=4] [ref=e59]:
+      - text: Integrations
+      - link "Permalink for this section" [ref=e60] [cursor=pointer]:
+        - /url: "#integrations"
+        - text: "#"
+    - list [ref=e61]:
+      - listitem [ref=e62]:
+        - link "Python" [ref=e63] [cursor=pointer]:
+          - /url: /docs/integrations/sdk/python
+        - text: and
+        - link "Typescript" [ref=e64] [cursor=pointer]:
+          - /url: /docs/integrations/sdk/typescript
+        - text: SDKs to easily monitor complex LLM apps
+      - listitem [ref=e65]:
+        - link "Frontend SDK" [ref=e66] [cursor=pointer]:
+          - /url: /docs/integrations/sdk/typescript
+        - text: to directly capture feedback from users as a quality signal
+    - paragraph [ref=e67]:
+      - emphasis [ref=e68]: Langfuse can be self-hosted or used with a generous free tier in our managed cloud version.
+    - heading "🚧 Debugging UIPermalink for this section" [level=2] [ref=e69]:
+      - text: 🚧 Debugging UI
+      - link "Permalink for this section" [ref=e70] [cursor=pointer]:
+        - /url: "#-debugging-ui"
+        - text: "#"
+    - paragraph [ref=e71]:
+      - img "Debugging UI" [ref=e72]
+    - paragraph [ref=e73]: "Based on the ingested data, Langfuse helps developers debug complex LLM apps in production:"
+    - list [ref=e74]:
+      - listitem [ref=e75]: Inspect LLM app executions in a nested UI for chains, agents and tool usage.
+      - listitem [ref=e76]: Segment by user feedback to find the root cause of quality problems.
+    - heading "🙏 AsksPermalink for this section" [level=2] [ref=e77]:
+      - text: 🙏 Asks
+      - link "Permalink for this section" [ref=e78] [cursor=pointer]:
+        - /url: "#-asks"
+        - text: "#"
+    - list [ref=e79]:
+      - listitem [ref=e80]:
+        - text: Star us on
+        - link "GitHub" [ref=e81] [cursor=pointer]:
+          - /url: https://github.com/langfuse/langfuse
+        - text: + follow along on
+        - link "Twitter" [ref=e82] [cursor=pointer]:
+          - /url: https://twitter.com/langfuse
+        - text: "&"
+        - link "LinkedIn" [ref=e83] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/langfuse
+        - text: .
+      - listitem [ref=e84]:
+        - text: If you run an LLM app, go ahead and
+        - link "talk to us" [ref=e85] [cursor=pointer]:
+          - /url: https://cal.com/marc-kl/langfuse-analytics
+        - text: ", we’d love to see how we can be helpful."
+      - listitem [ref=e86]: Please forward Langfuse to teams building commercial LLM applications.
+    - separator [ref=e87]
+    - heading "ReferencesPermalink for this section" [level=2] [ref=e88]:
+      - text: References
+      - link "Permalink for this section" [ref=e89] [cursor=pointer]:
+        - /url: "#references"
+        - text: "#"
+    - list [ref=e90]:
+      - listitem [ref=e91]:
+        - link "Launch YC" [ref=e92] [cursor=pointer]:
+          - /url: https://www.ycombinator.com/launches/J2s-langfuse-open-source-product-analytics-for-llm-apps
+      - listitem [ref=e93]:
+        - link "LinkedIn post" [ref=e94] [cursor=pointer]:
+          - /url: https://www.linkedin.com/feed/update/urn:li:activity:7087446200353783808/
+      - listitem [ref=e95]:
+        - link "Twitter thread" [ref=e96] [cursor=pointer]:
+          - /url: https://twitter.com/MarcKlingen/status/1681687868534652928
+    - generic [ref=e97]:
+      - generic [ref=e98]: Marc Klingen
+      - generic [ref=e99]:
+        - link [ref=e100] [cursor=pointer]:
+          - /url: https://github.com/marcklingen
+          - img [ref=e101]
+        - link [ref=e104] [cursor=pointer]:
+          - /url: https://twitter.com/marcklingen
+          - img [ref=e105]
+        - link [ref=e107] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/marcklingen/
+          - img [ref=e108]
+  - alert [ref=e112]
