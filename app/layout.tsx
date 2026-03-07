@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
@@ -39,9 +38,9 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-}: {
-  children: ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   const pageMap = await getPageMap();
 
   return (
