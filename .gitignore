@@ -12,3 +12,5 @@ public/sitemap*.xml
 
 # Mac
 .DS_Store
+
+.playwright-cli/*
