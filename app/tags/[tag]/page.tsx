@@ -5,9 +5,10 @@ export async function generateMetadata(props: {
   params: Promise<{ tag: string }>;
 }) {
   const params = await props.params;
+  const tag = params.tag;
 
   return {
-    title: `Posts Tagged with “${decodeURIComponent(params.tag)}”`,
+    title: `Posts Tagged with “${tag}”`,
   };
 }
 
@@ -22,7 +23,7 @@ export default async function TagPage(props: {
 }) {
   const params = await props.params;
   const posts = await getPosts();
-  const tag = decodeURIComponent(params.tag);
+  const tag = params.tag;
 
   return (
     <>
