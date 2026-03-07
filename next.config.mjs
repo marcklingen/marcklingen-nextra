@@ -1,12 +1,14 @@
 import nextra from "nextra";
 
-const withNextra = nextra({
-  theme: "nextra-theme-blog",
-  themeConfig: './theme.config.tsx',
-});
+const withNextra = nextra({});
 
 export default withNextra({
   cleanDistDir: true,
+  turbopack: {
+    resolveAlias: {
+      "next-mdx-import-source-file": "./mdx-components.tsx",
+    },
+  },
   redirects: async () => [
     ...nonPermanentRedirects.map(([source, destination]) => ({
       source,

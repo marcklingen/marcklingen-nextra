@@ -1,0 +1,38 @@
+import { PostCard } from "nextra-theme-blog";
+import { getPosts, getTags } from "../../posts/get-posts";
+
+export async function generateMetadata(props: {
+  params: Promise<{ tag: string }>;
+}) {
+  const params = await props.params;
+  const tag = params.tag;
+
+  return {
+    title: `Posts Tagged with “${tag}”`,
+  };
+}
+
+export async function generateStaticParams() {
+  const allTags = await getTags();
+
+  return [...new Set(allTags)].map((tag) => ({ tag }));
+}
+
+export default async function TagPage(props: {
+  params: Promise<{ tag: string }>;
+}) {
+  const params = await props.params;
+  const posts = await getPosts();
+  const tag = params.tag;
+
+  return (
+    <>
+      <h1>Posts Tagged with “{tag}”</h1>
+      {posts
+        .filter((post) => post.frontMatter.tags?.includes(tag))
+        .map((post) => (
+          <PostCard key={post.route} post={post} />
+        ))}
+    </>
+  );
+}
