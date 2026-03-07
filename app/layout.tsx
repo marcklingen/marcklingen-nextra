@@ -5,7 +5,6 @@ import { getPageMap } from "nextra/page-map";
 import { Layout, Navbar, ThemeSwitch } from "nextra-theme-blog";
 import "nextra-theme-blog/style.css";
 import "../global.css";
-import { PostHogProvider } from "./_components/posthog-provider";
 
 const socials = [
   {
@@ -52,34 +51,32 @@ export default async function RootLayout({
         }}
       />
       <body>
-        <PostHogProvider>
-          <Layout nextThemes={{ defaultTheme: "light" }}>
-            <Navbar pageMap={pageMap}>
-              <ThemeSwitch />
-            </Navbar>
-            {children}
-            <footer
-              className="site-footer"
-              data-pagefind-ignore="all"
-            >
-              <span>Marc Klingen</span>
-              <div className="site-socials">
-                {socials.map(({ url, name, Icon }) => (
-                  <a
-                    key={name}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="site-social-link"
-                    aria-label={name}
-                  >
-                    <Icon size={18} />
-                  </a>
-                ))}
-              </div>
-            </footer>
-          </Layout>
-        </PostHogProvider>
+        <Layout nextThemes={{ defaultTheme: "light" }}>
+          <Navbar pageMap={pageMap}>
+            <ThemeSwitch />
+          </Navbar>
+          {children}
+          <footer
+            className="site-footer"
+            data-pagefind-ignore="all"
+          >
+            <span>Marc Klingen</span>
+            <div className="site-socials">
+              {socials.map(({ url, name, Icon }) => (
+                <a
+                  key={name}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="site-social-link"
+                  aria-label={name}
+                >
+                  <Icon size={18} />
+                </a>
+              ))}
+            </div>
+          </footer>
+        </Layout>
       </body>
     </html>
   );
