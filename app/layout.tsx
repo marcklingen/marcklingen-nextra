@@ -49,7 +49,7 @@ export default async function RootLayout({
       <Head
         backgroundColor={{
           dark: "#100f0f",
-          light: "#fffcf0",
+          light: "#f8f8f5",
         }}
       />
       <body>
