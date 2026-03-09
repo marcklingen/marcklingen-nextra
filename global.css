@@ -1,14 +1,17 @@
 :root {
-  --site-bg: 48 100% 97%;
-  --site-bg-muted: 51 33% 92%;
-  --site-border: 50 14% 83%;
-  --site-text-strong: 0 3% 6%;
-  --site-text: 50 3% 42%;
-  --site-text-soft: 49 7% 70%;
-  --nextra-bg: 255 252 240;
-  --nextra-primary-hue: 0;
-  --nextra-primary-saturation: 3%;
-  --nextra-primary-lightness: 6%;
+  --site-bg: 210 33% 98%;
+  --site-bg-muted: 210 23% 94%;
+  --site-border: 214 16% 84%;
+  --site-text-strong: 222 31% 12%;
+  --site-text: 220 13% 35%;
+  --site-text-soft: 218 11% 62%;
+  --site-link: 12 53% 36%;
+  --site-link-hover: 10 60% 28%;
+  --site-accent: 13 80% 76%;
+  --nextra-bg: 248 250 252;
+  --nextra-primary-hue: 12;
+  --nextra-primary-saturation: 53%;
+  --nextra-primary-lightness: 36%;
 }
 
 :root[class~='dark'] {
@@ -18,6 +21,9 @@
   --site-text-strong: 55 10% 79%;
   --site-text: 43 3% 52%;
   --site-text-soft: 45 2% 33%;
+  --site-link: 55 10% 79%;
+  --site-link-hover: 40 18% 88%;
+  --site-accent: 12 40% 35%;
   --nextra-bg: 16 15 15;
   --nextra-primary-hue: 55;
   --nextra-primary-saturation: 10%;
@@ -31,6 +37,10 @@ html {
 body {
   min-height: 100vh;
   background: hsl(var(--site-bg));
+  background-image:
+    radial-gradient(circle at top left, hsl(var(--site-accent) / 0.18), transparent 34%),
+    radial-gradient(circle at top right, hsl(var(--site-accent) / 0.08), transparent 30%);
+  background-attachment: fixed;
   color: hsl(var(--site-text));
   font-feature-settings: 'rlig' 1, 'calt' 1;
 }
@@ -105,7 +115,14 @@ article h1 {
 }
 
 article :where(a):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  color: hsl(var(--site-link));
   font-weight: 400;
+  text-decoration-color: hsl(var(--site-link) / 0.4);
+}
+
+article :where(a):not(:where([class~='not-prose'], [class~='not-prose'] *)):hover {
+  color: hsl(var(--site-link-hover));
+  text-decoration-color: hsl(var(--site-link-hover) / 0.55);
 }
 
 .page-meta {
