@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "next dev --webpack -p 3334",
     "build": "next build --webpack",
+    "typecheck": "tsc --noEmit",
     "postbuild": "next-sitemap",
     "start": "next start -p 3334"
   },

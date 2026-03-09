@@ -1,7 +1,14 @@
+import type { LucideIcon } from 'lucide-react'
 import { Github, Linkedin, Twitter } from 'lucide-react'
 import { Footer } from 'nextra-theme-blog'
 
-const socials = [
+type SocialLink = {
+  href: string
+  label: string
+  Icon: LucideIcon
+}
+
+const socials: SocialLink[] = [
   {
     href: 'https://github.com/marcklingen',
     label: 'GitHub',

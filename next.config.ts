@@ -1,3 +1,4 @@
+import type { NextConfig } from 'next'
 import nextra from 'nextra'
 
 const withNextra = nextra({
@@ -5,7 +6,7 @@ const withNextra = nextra({
   readingTime: true
 })
 
-export default withNextra({
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   cleanDistDir: true,
   redirects: async () => [
@@ -20,7 +21,9 @@ export default withNextra({
       permanent: true
     }))
   ]
-})
+}
+
+export default withNextra(nextConfig)
 
 const nonPermanentRedirects = [
   ['/gh', 'https://github.com/marcklingen'],

@@ -1,3 +1,5 @@
+import type { MetaRecord } from 'nextra'
+
 export default {
   projects: {
     type: 'page'
@@ -8,4 +10,4 @@ export default {
   index: {
     type: 'page'
   }
-}
+} satisfies MetaRecord

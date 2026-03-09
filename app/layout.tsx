@@ -1,11 +1,13 @@
+import type { Metadata } from 'next'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { Layout, Navbar, ThemeSwitch } from 'nextra-theme-blog'
+import type { ReactNode } from 'react'
 import 'nextra-theme-blog/style.css'
 import '../global.css'
 import { SiteFooter } from '@/components/site-footer'
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL('https://marcklingen.com'),
   title: {
     default: 'Marc Klingen',
@@ -17,7 +19,11 @@ export const metadata = {
   }
 }
 
-export default async function RootLayout({ children }) {
+type RootLayoutProps = Readonly<{
+  children: ReactNode
+}>
+
+export default async function RootLayout({ children }: RootLayoutProps) {
   const pageMap = await getPageMap()
 
   return (

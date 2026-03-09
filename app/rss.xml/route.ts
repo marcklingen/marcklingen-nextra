@@ -7,7 +7,7 @@ const CONFIG = {
   lang: 'en-us'
 }
 
-function escapeXml(value = '') {
+function escapeXml(value = ''): string {
   return value
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
@@ -20,10 +20,10 @@ export async function GET() {
   const posts = await getPosts()
   const items = posts
     .map(post => {
-      const title = escapeXml(post.title)
+      const title = escapeXml(post.frontMatter.title || post.title)
       const description = escapeXml(post.frontMatter.description || '')
       const link = `${CONFIG.siteUrl}${post.route}`
-      const pubDate = new Date(post.frontMatter.date).toUTCString()
+      const pubDate = new Date(post.frontMatter.date ?? 0).toUTCString()
 
       return `    <item>
         <title>${title}</title>

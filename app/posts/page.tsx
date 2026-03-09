@@ -1,8 +1,11 @@
+import type { Metadata } from 'next'
 import { PostCard } from 'nextra-theme-blog'
 import { getPosts } from './get-posts'
 
-export const metadata = {
-  title: 'Posts'
+const pageTitle = 'Posts'
+
+export const metadata: Metadata = {
+  title: pageTitle
 }
 
 export default async function PostsPage() {
@@ -10,7 +13,7 @@ export default async function PostsPage() {
 
   return (
     <>
-      <h1>{metadata.title}</h1>
+      <h1>{pageTitle}</h1>
       {posts.map(post => (
         <PostCard key={post.route} post={post} readMore="More →" />
       ))}
