@@ -22,7 +22,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head backgroundColor={{ dark: '#100f0f', light: '#fffcf0' }} />
+      <Head backgroundColor={{ dark: '#100f0f', light: '#f8fafc' }} />
       <body>
         <Layout
           nextThemes={{
