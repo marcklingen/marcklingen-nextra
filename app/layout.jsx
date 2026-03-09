@@ -24,7 +24,6 @@ export default async function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <Head backgroundColor={{ dark: '#100f0f', light: '#fffcf0' }} />
       <body>
-        {/* PostHog is disabled. See `components/analytics-provider.jsx` for the commented cookieless setup. */}
         <Layout
           nextThemes={{
             defaultTheme: 'light',
