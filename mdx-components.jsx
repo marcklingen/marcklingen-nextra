@@ -1,5 +1,5 @@
 import { useMDXComponents as getBlogMDXComponents } from 'nextra-theme-blog'
-import { SubscribeCta } from './components/footer-subscribe'
+import { SubscribeCta } from './components/subscribe'
 
 const blogComponents = getBlogMDXComponents()
 

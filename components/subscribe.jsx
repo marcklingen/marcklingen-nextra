@@ -235,7 +235,7 @@ function FooterSubscribeForm({ source }) {
         className="subscribe-form-footer-cta"
         onClick={activate}
       >
-        Subscribe to updates
+        Subscribe for updates
       </button>
 
       <form

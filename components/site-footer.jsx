@@ -1,6 +1,6 @@
 import { Github, Linkedin, Twitter } from 'lucide-react'
 import { Footer } from 'nextra-theme-blog'
-import { FooterSubscribe } from './footer-subscribe'
+import { FooterSubscribe } from './subscribe'
 
 const socials = [
   {

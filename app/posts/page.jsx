@@ -1,5 +1,5 @@
 import { PostCard } from 'nextra-theme-blog'
-import { SubscribeCta } from '../../components/footer-subscribe'
+import { SubscribeCta } from '../../components/subscribe'
 import { getPosts } from './get-posts'
 
 export const metadata = {
