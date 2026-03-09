@@ -118,6 +118,7 @@ Important:
 - Do not move content out of MDX unless explicitly asked.
 - Keep pages statically simple; this site does not need unnecessary client components.
 - If adding a new top-level section, update `app/_meta.global.js` if navigation should expose it.
+- Update `AGENTS.md` when repo conventions, structure, commands, or workflows change so the guidance stays current.
 
 ## Quick Checks
 
