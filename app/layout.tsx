@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import { Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import { Layout, Navbar, ThemeSwitch } from "nextra-theme-blog";
 import "nextra-theme-blog/style.css";
@@ -35,6 +34,13 @@ export const metadata: Metadata = {
   authors: [{ name: "Marc Klingen" }],
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8f8f5" },
+    { media: "(prefers-color-scheme: dark)", color: "#100f0f" },
+  ],
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -44,12 +50,6 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head
-        backgroundColor={{
-          dark: "#100f0f",
-          light: "#f8f8f5",
-        }}
-      />
       <body>
         <Layout nextThemes={{ defaultTheme: "light" }}>
           <Navbar pageMap={pageMap}>
