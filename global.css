@@ -1,73 +1,173 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-a {
-    font-weight: 400 !important;
+:root {
+  --site-bg: 48 100% 97%;
+  --site-bg-muted: 51 33% 92%;
+  --site-border: 50 14% 83%;
+  --site-text-strong: 0 3% 6%;
+  --site-text: 50 3% 42%;
+  --site-text-soft: 49 7% 70%;
+  --nextra-bg: 255 252 240;
+  --nextra-primary-hue: 0;
+  --nextra-primary-saturation: 3%;
+  --nextra-primary-lightness: 6%;
 }
 
-@layer base {
-    :root {
-        --flexoki-bg: 48 100% 97%;
-        --flexoki-bg-2: 51 33% 92%;
-
-        --flexoki-ui: 51 21% 88%;
-        --flexoki-ui-2: 50 14% 83%;
-        --flexoki-ui-3: 55 10% 79%;
-
-        --flexoki-tx: 0 3% 6%;
-        --flexoki-tx-2: 50 3% 42%;
-        --flexoki-tx-3: 49 7% 70%;
-
-        --flexoki-re: 3 62% 42%;
-    }
-
-    :root[class~="dark"] {
-        --flexoki-bg: 0 3% 6%;
-        --flexoki-bg-2: 30 4% 11%;
-
-        --flexoki-ui: 30 3% 15%;
-        --flexoki-ui-2: 40 3% 20%;
-        --flexoki-ui-3: 30 3% 24%;
-
-        --flexoki-tx: 55 10% 79%;
-        --flexoki-tx-2: 43 3% 52%;
-        --flexoki-tx-3: 45 2% 33%;
-
-        --flexoki-re: 5 61% 54%;
-    }
-
-    :root {
-        --background: var(--flexoki-bg);
-        --foreground: var(--flexoki-tx);
-        --card: var(--flexoki-bg);
-        --card-foreground: var(--flexoki-tx);
-        --popover: var(--flexoki-bg);
-        --popover-foreground: var(--flexoki-tx);
-        --primary: var(--flexoki-tx);
-        --primary-foreground: var(--flexoki-bg);
-        --secondary: var(--flexoki-ui-2);
-        --secondary-foreground: var(--flexoki-tx-2);
-        --muted: var(--flexoki-bg-2);
-        --muted-foreground: var(--flexoki-tx-3);
-        --accent: var(--flexoki-ui);
-        --accent-foreground: var(--flexoki-tx-2);
-        --destructive: var(--flexoki-re);
-        --destructive-foreground: var(--flexoki-bg);
-        --border: var(--flexoki-ui-2);
-        --input: var(--flexoki-ui-2);
-        --ring: var(--flexoki-ui-3);
-        --radius: 0.5rem;
-    }
+:root[class~='dark'] {
+  --site-bg: 0 3% 6%;
+  --site-bg-muted: 30 4% 11%;
+  --site-border: 40 3% 20%;
+  --site-text-strong: 55 10% 79%;
+  --site-text: 43 3% 52%;
+  --site-text-soft: 45 2% 33%;
+  --nextra-bg: 16 15 15;
+  --nextra-primary-hue: 55;
+  --nextra-primary-saturation: 10%;
+  --nextra-primary-lightness: 79%;
 }
 
-@layer base {
-    * {
-        @apply border-border;
-    }
+html {
+  background: hsl(var(--site-bg));
+}
 
-    body {
-        @apply bg-background text-foreground;
-        font-feature-settings: "rlig" 1, "calt" 1;
-    }
+body {
+  min-height: 100vh;
+  background: hsl(var(--site-bg));
+  color: hsl(var(--site-text));
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+}
+
+article {
+  --tw-prose-body: hsl(var(--site-text));
+  --tw-prose-headings: hsl(var(--site-text-strong));
+  --tw-prose-lead: hsl(var(--site-text));
+  --tw-prose-links: hsl(var(--site-text-strong));
+  --tw-prose-bold: hsl(var(--site-text-strong));
+  --tw-prose-counters: hsl(var(--site-text));
+  --tw-prose-bullets: hsl(var(--site-text-soft));
+  --tw-prose-hr: hsl(var(--site-border));
+  --tw-prose-quotes: hsl(var(--site-text-strong));
+  --tw-prose-quote-borders: hsl(var(--site-border));
+  --tw-prose-captions: hsl(var(--site-text-soft));
+  --tw-prose-kbd: hsl(var(--site-text-strong));
+  --tw-prose-code: hsl(var(--site-text-strong));
+  --tw-prose-pre-code: hsl(var(--site-bg));
+  --tw-prose-pre-bg: hsl(var(--site-text-strong));
+  --tw-prose-th-borders: hsl(var(--site-border));
+  --tw-prose-td-borders: hsl(var(--site-border));
+  max-width: 40rem;
+  padding-top: 4.75rem;
+  padding-bottom: 4rem;
+}
+
+.dark article {
+  --tw-prose-body: hsl(var(--site-text-strong));
+  --tw-prose-headings: hsl(var(--site-text-strong));
+  --tw-prose-lead: hsl(var(--site-text));
+  --tw-prose-links: hsl(var(--site-text-strong));
+  --tw-prose-bold: hsl(var(--site-text-strong));
+  --tw-prose-counters: hsl(var(--site-text));
+  --tw-prose-bullets: hsl(var(--site-text-soft));
+  --tw-prose-hr: hsl(var(--site-border));
+  --tw-prose-quotes: hsl(var(--site-text-strong));
+  --tw-prose-quote-borders: hsl(var(--site-border));
+  --tw-prose-captions: hsl(var(--site-text));
+  --tw-prose-kbd: hsl(var(--site-text-strong));
+  --tw-prose-code: hsl(var(--site-text-strong));
+  --tw-prose-pre-code: hsl(var(--site-text-strong));
+  --tw-prose-pre-bg: hsl(var(--site-bg-muted));
+  --tw-prose-th-borders: hsl(var(--site-border));
+  --tw-prose-td-borders: hsl(var(--site-border));
+}
+
+header[data-pagefind-ignore='all'] {
+  margin-bottom: 2.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+header[data-pagefind-ignore='all'] a,
+header[data-pagefind-ignore='all'] button {
+  color: hsl(var(--site-text));
+}
+
+header[data-pagefind-ignore='all'] a:hover,
+header[data-pagefind-ignore='all'] button:hover {
+  color: hsl(var(--site-text-strong));
+}
+
+header[data-pagefind-ignore='all'] button {
+  padding: 0;
+}
+
+article h1 {
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+article :where(a):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  font-weight: 400;
+}
+
+.page-meta {
+  margin: -0.35rem 0 2rem;
+  color: hsl(var(--site-text));
+  font-size: 0.875rem;
+}
+
+article :where(img):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  border: 1px solid hsl(var(--site-border));
+  border-radius: 0.75rem;
+  background: hsl(var(--site-bg-muted));
+}
+
+small[data-pagefind-ignore='all'] {
+  margin-top: 3rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid hsl(var(--site-border));
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.72rem;
+}
+
+.site-footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-footer-rss {
+  color: hsl(var(--site-text));
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.site-footer a {
+  opacity: 0.55;
+  transition: opacity 150ms ease;
+}
+
+.site-footer a:hover {
+  opacity: 1;
+}
+
+.site-footer svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  article {
+    padding-top: 3.5rem;
+  }
+
+  .site-footer {
+    flex-wrap: wrap;
+  }
 }
