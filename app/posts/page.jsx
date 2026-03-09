@@ -1,4 +1,5 @@
 import { PostCard } from 'nextra-theme-blog'
+import { SubscribeCta } from '../../components/footer-subscribe'
 import { getPosts } from './get-posts'
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default async function PostsPage() {
       {posts.map(post => (
         <PostCard key={post.route} post={post} readMore="More →" />
       ))}
+      <SubscribeCta />
     </>
   )
 }

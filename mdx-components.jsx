@@ -1,4 +1,5 @@
 import { useMDXComponents as getBlogMDXComponents } from 'nextra-theme-blog'
+import { SubscribeCta } from './components/footer-subscribe'
 
 const blogComponents = getBlogMDXComponents()
 
@@ -21,6 +22,7 @@ export function useMDXComponents(components) {
             </div>
           ) : null}
           {children}
+          {date ? <SubscribeCta /> : null}
         </>
       )
     },
