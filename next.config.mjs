@@ -8,6 +8,11 @@ const withNextra = nextra({
 export default withNextra({
   reactStrictMode: true,
   cleanDistDir: true,
+  turbopack: {
+    resolveAlias: {
+      'next-mdx-import-source-file': './mdx-components.jsx'
+    }
+  },
   redirects: async () => [
     ...nonPermanentRedirects.map(([source, destination]) => ({
       source,

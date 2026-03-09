@@ -1,8 +1,8 @@
 {
   "homepage": "https://marcklingen.com",
   "scripts": {
-    "dev": "next dev --webpack -p 3334",
-    "build": "next build --webpack",
+    "dev": "next dev --turbopack -p 3334",
+    "build": "next build --turbopack",
     "postbuild": "next-sitemap",
     "start": "next start -p 3334"
   },
