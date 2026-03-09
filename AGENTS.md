@@ -16,7 +16,7 @@ Keep changes minimal and consistent with the existing site. Prefer editing exist
 - Package manager: `pnpm` (`packageManager` is pinned in `package.json`)
 - Framework: Next.js 16 App Router
 - Content/theme: `nextra` + `nextra-theme-blog`
-- Language mix: mostly JavaScript/JSX + MDX, with TypeScript config present
+- Language mix: mostly JavaScript/JSX + MDX
 
 ## Common Commands
 
@@ -97,7 +97,7 @@ Important:
 
 ## Implementation Notes
 
-- The repo uses the `@/*` path alias from `tsconfig.json`.
+- Prefer relative imports; there is no project path-alias config.
 - `normalizePages(getPageMap('/posts'))` is the source of truth for the post list.
 - RSS is generated from the same post data, so post frontmatter changes affect both `/posts` and `/rss.xml`.
 - `app/feed.xml/route.js` is only a re-export of the RSS handler; keep both routes working.
