@@ -3,7 +3,4 @@ version = 1
 name = "marcklingen-nextra"
 
 [setup]
-script = '''
-nvm use
-pnpm install
-'''
+script = "pnpm install"
