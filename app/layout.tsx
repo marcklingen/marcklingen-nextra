@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { Layout, Navbar, ThemeSwitch } from 'nextra-theme-blog'
-import type { ReactNode } from 'react'
 import 'nextra-theme-blog/style.css'
 import '../global.css'
 import { SiteFooter } from '@/components/site-footer'
@@ -19,11 +18,7 @@ export const metadata: Metadata = {
   }
 }
 
-type RootLayoutProps = Readonly<{
-  children: ReactNode
-}>
-
-export default async function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: LayoutProps<'/'>) {
   const pageMap = await getPageMap()
 
   return (
