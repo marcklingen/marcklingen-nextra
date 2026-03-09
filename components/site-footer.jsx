@@ -1,5 +1,6 @@
 import { Github, Linkedin, Twitter } from 'lucide-react'
 import { Footer } from 'nextra-theme-blog'
+import { FooterSubscribe } from './subscribe'
 
 const socials = [
   {
@@ -25,6 +26,7 @@ export function SiteFooter() {
       <div className="site-footer">
         <span>Marc Klingen</span>
         <div className="site-footer-links">
+          <FooterSubscribe />
           <a className="site-footer-rss" href="/rss.xml">
             RSS
           </a>

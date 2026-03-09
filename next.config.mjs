@@ -1,3 +1,4 @@
+import { withBotId } from 'botid/next/config'
 import nextra from 'nextra'
 
 const withNextra = nextra({
@@ -5,7 +6,7 @@ const withNextra = nextra({
   readingTime: true
 })
 
-export default withNextra({
+export default withBotId(withNextra({
   reactStrictMode: true,
   cleanDistDir: true,
   turbopack: {
@@ -25,7 +26,7 @@ export default withNextra({
       permanent: true
     }))
   ]
-})
+}))
 
 const nonPermanentRedirects = [
   ['/gh', 'https://github.com/marcklingen'],
