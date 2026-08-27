@@ -5,6 +5,9 @@ export default {
   posts: {
     type: 'page'
   },
+  'conference-bio': {
+    type: 'page'
+  },
   index: {
     type: 'page'
   }

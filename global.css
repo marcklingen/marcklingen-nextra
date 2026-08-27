@@ -137,6 +137,16 @@ article :where(img):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
   background: hsl(var(--site-bg-muted));
 }
 
+.conference-photo {
+  max-width: 7rem;
+  margin: 2rem 0 0;
+}
+
+.conference-photo img {
+  width: 100%;
+  margin: 0;
+}
+
 small[data-pagefind-ignore='all'] {
   margin-top: 3rem;
   padding-top: 0.85rem;
@@ -151,7 +161,7 @@ small[data-pagefind-ignore='all'] {
   font-size: 0.72rem;
 }
 
-.site-footer > * {
+.site-footer>* {
   min-width: 0;
 }
 
@@ -289,11 +299,6 @@ small[data-pagefind-ignore='all'] {
   line-height: inherit;
   color: hsl(45 7% 65%);
   font-family: inherit;
-}
-
-.subscribe-form-copy-strong {
-  color: hsl(var(--site-text-strong));
-  font-weight: 600;
 }
 
 .subscribe-form-fields {
